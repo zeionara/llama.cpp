@@ -1,5 +1,15 @@
 # Docker
 
+## Building docker for arm
+
+To build docker image for `arm`, run the following command:
+
+```sh
+docker build -t local/llama.cpp:full --target full --build-arg TARGETARCH=arm64 -f .devops/cpu.Dockerfile .
+docker build -t local/llama.cpp:server --target server --build-arg TARGETARCH=arm64 -f .devops/cpu.Dockerfile .
+docker build -t local/llama.cpp:light --target light --build-arg TARGETARCH=arm64 -f .devops/cpu.Dockerfile .
+```
+
 ## Prerequisites
 * Docker must be installed and running on your system.
 * Create a folder to store big models & intermediate files (ex. /llama/models)
