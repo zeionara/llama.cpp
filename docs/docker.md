@@ -6,6 +6,8 @@ To build docker image for `arm`, run the following command:
 
 ```sh
 docker build -t local/llama.cpp:full-generic-cpu --target full --build-arg TARGETARCH=arm64 -f .devops/cpu.Dockerfile .
+docker build -t local/llama.cpp:server-generic-cpu --target server --build-arg TARGETARCH=arm64 -f .devops/cpu.Dockerfile .
+docker build -t local/llama.cpp:light-generic-cpu --target light --build-arg TARGETARCH=arm64 -f .devops/cpu.Dockerfile .
 ```
 
 ## Prerequisites
